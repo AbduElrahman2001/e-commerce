@@ -1,0 +1,255 @@
+@import url("https://fonts.google.com/specimen/Oswald");
+
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+body{
+    position: relative;
+}
+i{
+    cursor: pointer;
+}
+.tap{
+    display: none;
+    position: relative;
+}
+.nav1{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    /* color: gainsboro; */
+    background-color: gainsboro;
+}
+.nav1 .brand1{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+.nav1 ul{
+    height: 50px;
+    width: 30%;
+}
+.nav1 ul li a{
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-top: 15%;
+    text-decoration: none;
+}
+.nav1 ul li{
+    text-decoration: none;
+    display: inline-block;
+}
+.container1{
+    background-color: gray;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    background-color: gainsboro;
+    border-radius: 10px;
+    height: 80%;
+    width: 400px;
+    max-width: 95%;
+    box-shadow: 5px;
+    margin-top: 50px ;
+    padding: 60px 0px;
+} 
+
+.box .alert1 , .alert2{
+    background-color: rgb(207, 79, 79);
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    padding: 7px 0;
+    display: none;
+}
+.box h1 {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 35px;
+}
+form{
+    margin: auto;
+}
+.box form div{
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    border-radius: 250px;
+    margin-bottom: 25px;
+    padding: 10px;
+    font-size: 15px;
+    margin: 20px;
+    color: black;
+}
+.box form div:hover{
+    color: gainsboro;
+}
+.box form div input{
+    background-color:gray;
+    color: white;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    min-width: 0;
+    flex: 1;
+}
+.box form div input::placeholder{
+    opacity: 1;
+    color: white;
+    font-size: 12px;
+
+}
+.box form div input[type="text"]{
+    letter-spacing: 1px;
+    
+    cursor: pointer;
+}
+.box form button[type="submit"]{
+    font-size: 12px;
+    font-weight: 600px;
+    border:none;
+    width:80%;
+    padding: 15px;
+    border-radius:250px;
+    color:white;
+    background-color:gray;
+    margin:0 10%;
+    display: inline-block;
+}
+.box form button[type="submit"]:hover{
+    background-color: aliceblue;
+    color: gray;
+}
+.box span{
+    margin-top:  25px;
+    display: block;
+    text-align: center;
+}
+/* ///////////////////////////////////////////////// */
+.content{
+    background-image: url("../Images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424144;
+    height: 135vh;
+}
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+}
+.products .card{
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.products .card img{
+    height: 250px;
+    width: 100%;
+}
+.products .card .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+.products .card .title{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+.products .card .box1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.products .card .box1 .price{
+    color: #f63e4e;
+    font-size: 20px;
+    font-weight: bold;
+}
+.products .card .box1 .btn{
+    font-size: 13px;
+    color: #f63e4e;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+}
+.card .cart i{
+    font-size: 20px;
+    color: #f63e4e  ;
+}
+.products .card .box1 .btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+}
+/* /////////////////////////////////////////////////// */
+.nav1 #tap #shopping_cart {
+    position: relative;
+    height: 30px;
+    width: 40px;
+}
+.badge{
+    position: absolute;
+    right: 0;
+    min-height: 17px;
+    min-width: 15px;
+    border-radius: 50%;
+    background-color: #f63e4e;
+    display: none;
+    font-size:15px;
+    text-align: center;
+    padding: 3px;
+}
+.shopping_detail{
+    display: none;
+    max-height: 200px;
+    width: 215px;
+    position: absolute;
+    background-color: #f63e4e;
+    right: -60px;
+    top: 50px;
+    border-radius: 3px;
+}
+.shopping_detail a{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 15px;
+    display: inline-block;
+}
+.shopping_detail {
+    overflow-y: scroll;
+}
+
